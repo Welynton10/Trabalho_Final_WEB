@@ -319,49 +319,52 @@ main {
 
 /* Itens individuais do carrinho */
 .cart-items li {
-    margin-bottom: 0.5rem; /* Margem inferior */
+    display: flex; /* Display flexível */
+    justify-content: space-between; /* Espaçamento entre itens */
+    align-items: center; /* Alinhar itens verticalmente */
+    padding: 0.5rem 0; /* Preenchimento */
+    border-bottom: 1px solid #eee; /* Borda inferior */
 }
 
 /* Total do carrinho */
 .cart-total {
+    text-align: right; /* Alinhamento à direita */
     font-weight: bold; /* Peso da fonte */
-    margin-bottom: 1rem; /* Margem inferior */
+    margin-top: 1rem; /* Margem superior */
 }
 
 /* Botão de finalizar compra */
+.checkout-button, .clear-cart-button, .remove-from-cart {
+    display: block; /* Exibir como bloco */
+    width: 100%; /* Largura total */
+    padding: 0.8rem; /* Preenchimento */
+    margin-top: 0.5rem; /* Margem superior */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor apontador */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave */
+    color: white; /* Cor do texto */
+}
+
+/* Estilo específico para o botão de finalizar compra */
 .checkout-button {
-    background-color: rgb(41, 130, 247); /* Cor de fundo */
-    border: none; /* Sem borda */
-    cursor: pointer; /* Cursor apontador */
-    padding: 0.8rem 3.8rem; /* Preenchimento */
-    border-radius: 9999px; /* Borda arredondada */
-    color: white; /* Cor do texto */
-    font-weight: 500; /* Peso da fonte */
-    font-size: 1rem; /* Tamanho da fonte */
-    transition: all 0.2s; /* Transição suave */
+    background-color: #4caf50; /* Cor de fundo */
 }
 
-/* Efeito de hover no botão de finalizar compra */
-.checkout-button:hover {
-    background-color: rgb(3, 59, 133); /* Cor de fundo no hover */
+/* Estilo específico para o botão de limpar carrinho */
+.clear-cart-button {
+    background-color: #f44336; /* Cor de fundo */
 }
 
-/* Botão de remover do carrinho */
+/* Estilo específico para o botão de remover do carrinho */
 .remove-from-cart {
-    background-color: rgb(41, 130, 247); /* Cor de fundo */
-    border: none; /* Sem borda */
-    cursor: pointer; /* Cursor apontador */
-    padding: 0.8rem 3.8rem; /* Preenchimento */
-    border-radius: 9999px; /* Borda arredondada */
-    color: white; /* Cor do texto */
-    font-weight: 500; /* Peso da fonte */
-    font-size: 1rem; /* Tamanho da fonte */
-    transition: all 0.2s; /* Transição suave */
+    background-color: #ff3b00; /* Cor de fundo */
 }
 
-/* Efeito de hover no botão de remover do carrinho */
-.remove-from-cart:hover {
-    background-color: rgb(255, 59, 0); /* Cor de fundo no hover */
+/* Efeito de hover nos botões */
+.checkout-button:hover, .clear-cart-button:hover, .remove-from-cart:hover {
+    background-color: #555; /* Cor de fundo no hover */
 }
 
 /* Botão de limpar carrinho */
@@ -388,3 +391,4 @@ main {
     font-size: 1rem; /* Tamanho da fonte */
     transition: all 0.2s;
 }
+
