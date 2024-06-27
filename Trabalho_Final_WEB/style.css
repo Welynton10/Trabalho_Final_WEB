@@ -1,0 +1,390 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Titan+One&display=swap');
+
+/* Reset padrão para todos os elementos */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos gerais do corpo do documento */
+body {
+    font-family: "Passion One", sans-serif; /* Fonte principal */
+    font-weight: 400; /* Peso da fonte */
+    font-style: normal; /* Estilo normal */
+    font-size: 24px; /* Tamanho da fonte */
+}
+
+/* Conteúdo interno do cabeçalho */
+.header-inner-content {
+    max-width: 1300px; /* Largura máxima */
+    margin-left: auto; /* Alinhar à esquerda */
+    margin-right: auto; /* Alinhar à direita */
+}
+
+/* Barra de navegação */
+.navbar {
+    background-color: rgb(19, 37, 53); /* Cor de fundo */
+    padding: 1rem; /* Espaçamento interno */
+    position: sticky; /* Fixa no topo da página */
+    top: 0; /* Distância do topo */
+    box-shadow: 10px 0px 10px rgb(19, 37, 53); /* Sombra */
+    z-index: 99; /* Camada z-index */
+}
+
+/* Conteúdo interno do cabeçalho dentro da barra de navegação */
+.navbar > .header-inner-content {
+    display: flex; /* Display flexível */
+    align-items: center; /* Alinhar itens verticalmente */
+    justify-content: space-between; /* Espaçamento entre itens */
+    position: relative; /* Posição relativa */
+}
+
+/* Estilo da logo */
+.logo {
+    color: white; /* Cor do texto */
+}
+
+/* Estilo do texto dentro da logo */
+.logo span {
+    color: aqua; /* Cor do texto secundário */
+}
+
+/* Estilos da lista de navegação */
+nav ul {
+    display: flex; /* Display flexível */
+    list-style: none; /* Remover marcadores de lista */
+    align-items: center; /* Alinhar itens verticalmente */
+}
+
+/* Container dos ícones de navegação */
+.nav-icon-container {
+    display: flex; /* Display flexível */
+    align-items: center; /* Alinhar itens verticalmente */
+}
+
+/* Estilo dos ícones de navegação */
+.nav-icon-container img {
+    width: 30px; /* Largura dos ícones */
+    cursor: pointer; /* Cursor apontador */
+}
+
+/* Estilo dos itens da lista de navegação */
+nav ul li {
+    color: white; /* Cor do texto */
+    margin-right: 1.5rem; /* Margem direita */
+    cursor: pointer; /* Cursor apontador */
+}
+
+/* Efeito de hover nos itens da lista de navegação */
+nav ul li:hover {
+    transform: translateY(-5px); /* Translação vertical no hover */
+    transition: all 0.2s; /* Transição suave */
+    font-weight: bold; /* Peso da fonte em negrito */
+}
+
+/* Botão de menu para dispositivos móveis */
+.menu-button {
+    display: none; /* Ocultar por padrão */
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-image: radial-gradient(white, rgb(222, 222, 222)); /* Imagem de fundo */
+}
+
+/* Parte inferior do cabeçalho */
+.header-bottom-side {
+    display: flex; /* Display flexível */
+    align-items: center; /* Alinhar itens verticalmente */
+    justify-content: center; /* Justificar conteúdo */
+    padding: 1rem; /* Espaçamento interno */
+}
+
+/* Lado esquerdo do cabeçalho inferior */
+.header-bottom-side-left {
+    height: 100%; /* Altura */
+    flex-basis: 50%; /* Base flexível */
+}
+
+/* Estilos do texto no lado esquerdo */
+.header-bottom-side-left h2 {
+    font-size: 3.2rem; /* Tamanho da fonte */
+    margin-bottom: 1.5rem; /* Margem inferior */
+}
+
+/* Estilos do parágrafo no lado esquerdo */
+.header-bottom-side-left p {
+    line-height: 1.5rem; /* Altura da linha */
+    margin-bottom: 1.5rem; /* Margem inferior */
+    font-family: Arial, Helvetica, sans-serif; /* Fonte */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilos do botão no lado esquerdo */
+.header-bottom-side-left button {
+    background-color: rgb(41, 130, 247); /* Cor de fundo */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor apontador */
+    padding: 0.8rem 3.8rem; /* Preenchimento */
+    border-radius: 9999px; /* Borda arredondada */
+    color: white; /* Cor do texto */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: all 0.2s; /* Transição suave */
+}
+
+/* Efeito de hover no botão do lado esquerdo */
+.header-bottom-side-left button:hover {
+    background-color: rgb(3, 59, 133); /* Cor de fundo no hover */
+}
+
+/* Lado direito do cabeçalho inferior */
+.header-bottom-side-right {
+    flex-basis: 50%; /* Base flexível */
+    display: flex; /* Display flexível */
+    align-items: center; /* Alinhar itens verticalmente */
+    justify-content: center; /* Justificar conteúdo */
+}
+
+/* Estilos da imagem no lado direito */
+.header-bottom-side-right img {
+    width: 100%; /* Largura da imagem */
+}
+
+/* Media query para telas menores que 800px */
+@media (max-width: 800px) {
+    .logo {
+        font-size: 2.1rem; /* Tamanho da fonte da logo */
+    }
+
+    .menu-button {
+        display: block; /* Exibir botão de menu */
+    }
+
+    .header-bottom-side {
+        flex-direction: column; /* Direção da flexão */
+        text-align: center; /* Alinhamento do texto */
+        padding-top: 4rem; /* Espaçamento superior */
+    }
+
+    nav {
+        position: absolute; /* Posição absoluta */
+        background-color: rgb(19, 37, 53); /* Cor de fundo */
+        width: 100%; /* Largura total */
+        top: 46px; /* Distância do topo */
+        display: none; /* Ocultar por padrão */
+    }
+
+    nav ul {
+        flex-direction: column; /* Direção da flexão */
+    }
+
+    nav ul li {
+        text-align: center; /* Alinhamento do texto */
+        padding: 0.8rem; /* Preenchimento */
+        font-size: 15px; /* Tamanho da fonte */
+    }
+
+    .navbar.show-menu nav {
+        display: block; /* Exibir menu ao clicar */
+    }
+}
+
+/* Estilos para o conteúdo principal */
+main {
+    background-color: rgb(222, 222, 222); /* Cor de fundo */
+}
+
+/* Fundo cinza */
+.gray-background {
+    background-color: rgb(19, 37, 53); /* Cor de fundo */
+}
+
+/* Conteúdo interno da página */
+.page-inner-content {
+    max-width: 1280px; /* Largura máxima */
+    margin: 0 auto; /* Margem automática nas laterais */
+}
+
+/* Colunas para exibição de produtos */
+.cols {
+    display: grid; /* Display em grid */
+    padding: 4rem 1rem; /* Preenchimento */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
+    gap: 2rem; /* Espaço entre colunas */
+    font-family: Arial, Helvetica, sans-serif; /* Fonte */
+    font-size: medium; /* Tamanho da fonte */
+}
+
+/* Imagens nas colunas de 3 */
+.cols-3 img {
+    max-width: 100%; /* Largura máxima da imagem */
+}
+
+/* Imagens nas colunas de 4 */
+.cols-4 img {
+    max-width: 100%; /* Largura máxima da imagem */
+}
+
+/* Estilos das colunas */
+.cols-4 {
+    grid-template-columns: repeat(3, 2fr); /* 3 colunas com proporção */
+    gap: 1rem; /* Espaço entre colunas */
+}
+
+/* Efeito de hover nas colunas */
+.cols > * {
+    cursor: pointer; /* Cursor apontador */
+    transition: all 0.2s; /* Transição suave */
+}
+
+.cols > *:hover {
+    transform: translateY(-20px); /* Translação vertical no hover */
+}
+
+/* Título da seção */
+.section-title {
+    text-align: center; /* Alinhamento do texto */
+    margin-top: 4rem; /* Margem superior */
+    font-size: 1.8rem; /* Tamanho da fonte */
+}
+
+/* Linha de sublinhado para o título da seção */
+.subtitle-underline {
+    width: 100px; /* Largura */
+    height: 5px; /* Altura */
+    background-color: rgb(41, 130, 247); /* Cor de fundo */
+    border-radius: 9999px; /* Borda arredondada */
+    margin: 8px auto 0 auto; /* Margem */
+}
+
+/* Estilos do produto */
+.product {
+    color: rgb(0, 0, 0); /* Cor do texto */
+    margin-bottom: 1rem; /* Margem inferior */
+    display: flex; /* Display flexível */
+    flex-direction: column; /* Direção da coluna */
+}
+
+/* Nome do produto */
+.product-name {
+    font-weight: 600; /* Peso da fonte */
+    margin-top: 0.4rem; /* Margem superior */
+}
+
+/* Preço do produto */
+.product-price {
+    color: rgb(255, 101, 0); /* Cor do texto */
+    font-family: Poppins, sans-serif; /* Fonte */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    line-height: 3.3rem; /* Altura da linha */
+    font-weight: 700; /* Peso da fonte */
+}
+
+/* Estoque do produto */
+.product-stock {
+    font-family: Arial, Helvetica, sans-serif; /* Fonte */
+    font-size: 1rem; /* Tamanho da fonte */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    margin-top: 0.2rem; /* Margem superior */
+}
+
+/* Container do carrinho de compras */
+.cart-container {
+    position: fixed; /* Posição fixa */
+    top: 80px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    width: 300px; /* Largura */
+    background-color: white; /* Cor de fundo */
+    border: 1px solid #ccc; /* Borda */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 1rem; /* Preenchimento */
+    z-index: 100; /* Camada z-index */
+    display: none; /* Ocultar por padrão */
+}
+
+/* Exibir o carrinho de compras */
+.cart-container.show-cart {
+    display: block; /* Exibir quando ativo */
+}
+
+/* Lista de itens do carrinho */
+.cart-items {
+    list-style: none; /* Remover marcadores de lista */
+    padding: 0; /* Preenchimento */
+    margin: 0 0 1rem 0; /* Margem */
+}
+
+/* Itens individuais do carrinho */
+.cart-items li {
+    margin-bottom: 0.5rem; /* Margem inferior */
+}
+
+/* Total do carrinho */
+.cart-total {
+    font-weight: bold; /* Peso da fonte */
+    margin-bottom: 1rem; /* Margem inferior */
+}
+
+/* Botão de finalizar compra */
+.checkout-button {
+    background-color: rgb(41, 130, 247); /* Cor de fundo */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor apontador */
+    padding: 0.8rem 3.8rem; /* Preenchimento */
+    border-radius: 9999px; /* Borda arredondada */
+    color: white; /* Cor do texto */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: all 0.2s; /* Transição suave */
+}
+
+/* Efeito de hover no botão de finalizar compra */
+.checkout-button:hover {
+    background-color: rgb(3, 59, 133); /* Cor de fundo no hover */
+}
+
+/* Botão de remover do carrinho */
+.remove-from-cart {
+    background-color: rgb(41, 130, 247); /* Cor de fundo */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor apontador */
+    padding: 0.8rem 3.8rem; /* Preenchimento */
+    border-radius: 9999px; /* Borda arredondada */
+    color: white; /* Cor do texto */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: all 0.2s; /* Transição suave */
+}
+
+/* Efeito de hover no botão de remover do carrinho */
+.remove-from-cart:hover {
+    background-color: rgb(255, 59, 0); /* Cor de fundo no hover */
+}
+
+/* Botão de limpar carrinho */
+.clear-cart-button {
+    background-color: rgb(41, 130, 247); /* Cor de fundo */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor apontador */
+    padding: 0.8rem 3.8rem; /* Preenchimento */
+    border-radius: 9999px; /* Borda arredondada */
+    color: white; /* Cor do texto */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: all 0.2s; /* Transição suave */
+}
+
+.add-to-cart{
+    background-color: rgb(226, 123, 5); /* Cor de fundo */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor apontador */
+    padding: 0.4rem 3.1rem; /* Preenchimento */
+    border-radius: 9999px; /* Borda arredondada */
+    color: white; /* Cor do texto */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: all 0.2s;
+}
